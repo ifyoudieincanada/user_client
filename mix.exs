@@ -27,6 +27,6 @@ defmodule UserClient.Mixfile do
   #
   # Type "mix help deps" for more examples and options
   defp deps do
-    [{:http_client, git: "https://github.com/ifyoudieincanada/user_client.git"}]
+    [{:http_client, "~> 0.1.0"}]
   end
 end

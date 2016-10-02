@@ -10,7 +10,7 @@ If [available in Hex](https://hex.pm/docs/publish), the package can be installed
 
     ```elixir
     def deps do
-      [{:user_client, "~> 0.1.0"}]
+      [{:user_client, git: "https://github.com/ifyoudieincanada/user_client.git"}]
     end
     ```
 
