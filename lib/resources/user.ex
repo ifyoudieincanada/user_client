@@ -25,6 +25,12 @@ defmodule UserClient.User do
     end
   end
 
+  def has_permission?(user, permission_name) do
+    with {:ok, response} <- HTTP.get(url("/#{user.id}"), %{"permission" => permission_name}) do
+      {:ok, Map.get(response, "bool")}
+    end
+  end
+
   @spec create(user :: __MODULE__.t) :: {:ok, __MODULE__.t} | {:error, any}
   def create(user) do
     with {:ok, response} <- HTTP.post(url("/"), to_payload(user)) do
