@@ -27,6 +27,6 @@ defmodule UserClient.Mixfile do
   #
   # Type "mix help deps" for more examples and options
   defp deps do
-    [{:http_client, "~> 0.1.0"}]
+    [{:http_client, "~> 0.1.1"}]
   end
 end
